@@ -1,10 +1,10 @@
 # cs340
-repo for the cs340 class on client server development at SNHU
-Grazioso Salvare Dashboard README
-Description
+repo for the cs340 class on client server development at SNHU,
+Grazioso Salvare Dashboard,
+Description-
 This project aims to create a dashboard for Grazioso Salvare to manage and visualize their data. The dashboard provides functionality to filter and display animal data, visualize data through interactive charts, and display geolocation data of animals.
 
-Required Functionality
+Required Functionality-
 The required functionality of the project includes:
 
 Displaying a dashboard with interactive components such as data tables, dropdowns, and charts.
@@ -12,7 +12,7 @@ Filtering animal data based on categories such as breed and location.
 Visualizing data through interactive charts such as pie charts.
 Displaying geolocation data of animals on a map.
 
-Tools Used
+Tools Used-
 Dash Framework: Dash is a Python framework for building analytical web applications. It was chosen for its simplicity, flexibility, and ability to integrate seamlessly with Python libraries such as Pandas and Plotly for data visualization.
 MongoDB: MongoDB was used as the database to store and retrieve animal data. Its flexibility in handling unstructured data, scalability, and ease of use with Python through PyMongo made it a suitable choice for this project.
 PyMongo: PyMongo is a Python library for interacting with MongoDB. It was used to connect to the MongoDB database and perform CRUD operations on animal data.
