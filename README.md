@@ -1,5 +1,5 @@
 # cs340
-repo for the cs430 class on client server development at SNHU
+repo for the cs340 class on client server development at SNHU
 Grazioso Salvare Dashboard README
 Description
 This project aims to create a dashboard for Grazioso Salvare to manage and visualize their data. The dashboard provides functionality to filter and display animal data, visualize data through interactive charts, and display geolocation data of animals.
