@@ -34,7 +34,8 @@ class AnimalShelter(object):
         #
         # Initialize Connection
         #
-        self.client = MongoClient('mongodb://%s:%s@%s:%d' % (USER,PASS,HOST,PORT))
+        # self.client = MongoClient('mongodb://%s:%s@%s:%d' % (USER,PASS,HOST,PORT))
+        self.client = pymongo.MongoClient("mongodb://localhost:27017")
         self.database = self.client['%s' % (DB)]
         self.collection = self.database['%s' % (COL)]
 
@@ -98,4 +99,33 @@ class AnimalShelter(object):
             return result.deleted_count
         else:
             raise Exception("Query parameter is empty. Provide a valid query.")
+
+# mongocrud.py
+import pandas as pd
+from pymongo import MongoClient
+
+class MongoDBHelper:
+    def __init__(self, db_name, collection_name):
+        """Initializes MongoDB connection"""
+        self.client = MongoClient("mongodb://localhost:27017")
+        self.db = self.client[db_name]
+        self.collection = self.db[collection_name]
+
+    def import_csv_to_mongo(self, csv_file):
+        """Imports CSV data into MongoDB"""
+        df = pd.read_csv(csv_file)  # Read the CSV file into a DataFrame
+        records = df.to_dict(orient="records")  # Convert DataFrame to a list of dictionaries
+        self.collection.insert_many(records)  # Insert records into MongoDB
+        print(f"Data from {csv_file} imported successfully!")
+
+    def fetch_all_records(self):
+        """Fetches all records from MongoDB collection"""
+        records = list(self.collection.find({}))
+        for record in records:
+            record["_id"] = str(record["_id"])  # Convert MongoDB _id to string for easier JSON handling
+        return records
+
+    def clear_collection(self):
+        """Clear the MongoDB collection (for testing purposes)"""
+        self.collection.delete_many({})
 
