@@ -1,0 +1,66 @@
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+#data-table {
+    font-size: 0.9rem;
+}
+
+#data-table tbody tr {
+    cursor: pointer;
+}
+
+#data-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#map {
+    border-radius: 4px;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#crud-buttons {
+    gap: 10px;
+    display: none;
+}
+
+#crud-buttons button {
+    margin-right: 10px;
+}
+
+.selected-row {
+    background-color: #e3f2fd !important;
+}
+
+.alert {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
